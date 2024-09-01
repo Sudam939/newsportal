@@ -135,6 +135,7 @@ class CompanyController extends Controller
         // delete data from database
 
         $company = Company::find($id);
+        unlink(public_path($company->logo));
         $company->delete();
         toast('Record deleted successfully!','success');
         return redirect()->back();

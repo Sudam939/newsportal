@@ -17,16 +17,16 @@
                         href="{{ route('company.index') }}">Company Setup</a></li>
             </ul>
         </li>
-        <li class="dropdown">
-            <a href="index.html" class="nav-link"><i data-feather="tag"></i><span>Category</span></a>
+        <li class="dropdown {{ Request::routeIs('category*') ? 'active' : '' }}">
+            <a href="{{ route('category.index') }}" class="nav-link"><i data-feather="tag"></i><span>Category</span></a>
         </li>
 
         <li class="dropdown">
             <a href="index.html" class="nav-link"><i data-feather="file-text"></i><span>Post</span></a>
         </li>
 
-        <li class="dropdown">
-            <a href="index.html" class="nav-link"><i data-feather="image"></i><span>Advertise</span></a>
+        <li class="dropdown {{ Request::routeIs('advertise*') ? 'active' : '' }}">
+            <a href="{{route('advertise.index')}}" class="nav-link"><i data-feather="image"></i><span>Advertise</span></a>
         </li>
     </ul>
 </aside>
