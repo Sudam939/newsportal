@@ -6,6 +6,7 @@
                 @if (!$company)
                     <a href="{{ route('company.create') }}" class="btn btn-primary">Add</a>
                 @endif
+                
             </div>
 
 
