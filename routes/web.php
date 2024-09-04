@@ -8,12 +8,12 @@ use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 // Frontend Routes
-Route::get('/',[PageController::class,'home'])->name('home');
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/category/{slug}', [PageController::class, 'category'])->name('cat');
+Route::get('/news/{id}', [PageController::class, 'news'])->name('news');
+Route::get('/search', [PageController::class, 'search'])->name('search');
 
 
 
@@ -35,10 +35,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('/admin/category', CategoryController::class)->names('category');
     Route::resource('/admin/advertise', AdvertiseController::class)->names('advertise');
     Route::resource('/admin/post', PostController::class)->names('post');
-
 });
 
 
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

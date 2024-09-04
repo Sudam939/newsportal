@@ -11,9 +11,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="text/javascript"
+        src="https://platform-api.sharethis.com/js/sharethis.js#property=66d87486e5d1da0019714099&product=inline-share-buttons&source=platform"
+        async="async"></script>
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v20.0"
+        nonce="DeMyJXSz"></script>
+
 
     <header>
         <x-frontend-topbar />

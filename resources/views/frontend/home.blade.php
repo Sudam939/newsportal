@@ -23,6 +23,11 @@
     </section>
     {{-- Home Section --}}
 
+    <form action="{{ route('search') }}" method="get">
+        <input type="text" name="q" id="search">
+        <button type="submit">Search</button>
+    </form>
+
 
     {{-- News By Category --}}
     <section class="py-10">

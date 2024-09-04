@@ -8,7 +8,7 @@
 
                 @foreach ($categories as $category)
                     <li>
-                        <a href="{{ route('home') }}">{{ $category->nep_title }}</a>
+                        <a href="{{ route('cat', $category->slug) }}">{{ $category->nep_title }}</a>
                     </li>
                 @endforeach
             </ul>
