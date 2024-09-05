@@ -3,6 +3,7 @@
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h5>User</h5>
+                <a href="{{ route('export') }}" class="btn btn-info">Export</a>
                 <a href="{{ route('user.create') }}" class="btn btn-primary">Add New</a>
             </div>
 

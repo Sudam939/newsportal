@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::middleware('admin')->prefix('admin')->group(function () {
         Route::resource('/company', CompanyController::class)->names('company');
         Route::resource('/user', UserController::class)->names('user');
+        Route::get('/export', [UserController::class, 'export'])->name('export');
     });
 });
 

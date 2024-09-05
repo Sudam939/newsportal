@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exports\UsersExport;
 use App\Http\Controllers\Controller;
+use App\Imports\UsersImport;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UserController extends Controller
 {
@@ -22,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user.create');
     }
 
     /**
@@ -30,7 +33,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'image' => 'required|max:2048',
+        ]);
+
+        Excel::import(new UsersImport, $request->file('image'));
+
+        toast('Record saved successfully!', 'success');
+        return redirect()->back();
     }
 
     /**
@@ -63,5 +73,11 @@ class UserController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+
+    public function export()
+    {
+        return Excel::download(new UsersExport, 'users.csv');
     }
 }
