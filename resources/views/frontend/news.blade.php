@@ -1,4 +1,4 @@
-<x-frontend-layout>
+<x-frontend-layout :title="$news->title. 'Jawaaf News'" :meta_keywords="$news->meta_keywords" :meta_description="$news->meta_description">
 
     <section class="py-10">
         <div class="container">

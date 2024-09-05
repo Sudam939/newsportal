@@ -1,4 +1,4 @@
-<x-frontend-layout>
+<x-frontend-layout :title="'Jawaaf News Portal | Home'">
 
     {{-- Home Section --}}
     <section class="py-10">

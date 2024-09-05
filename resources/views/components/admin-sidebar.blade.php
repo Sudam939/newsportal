@@ -29,5 +29,11 @@
             <a href="{{ route('advertise.index') }}" class="nav-link"><i
                     data-feather="image"></i><span>Advertise</span></a>
         </li>
+
+        @if (Auth::user()->role == 'admin')
+            <li class="dropdown {{ Request::routeIs('user*') ? 'active' : '' }}">
+                <a href="{{ route('user.index') }}" class="nav-link"><i data-feather="image"></i><span>User</span></a>
+            </li>
+        @endif
     </ul>
 </aside>
