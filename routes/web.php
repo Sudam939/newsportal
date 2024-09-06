@@ -16,7 +16,7 @@ Route::get('/category/{slug}', [PageController::class, 'category'])->name('cat')
 Route::get('/news/{id}', [PageController::class, 'news'])->name('news');
 Route::get('/search', [PageController::class, 'search'])->name('search');
 
-
+//php artisan optimize:clear
 
 
 //Admin Dashboard Routes

@@ -33,6 +33,7 @@ class PageController extends Controller
         return view('frontend.home', compact('latest_news', 'trending_news'));
     }
 
+
     public function category($slug)
     {
         $category = Category::where('slug', $slug)->first();
